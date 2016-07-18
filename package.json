@@ -1,6 +1,6 @@
 {
   "name": "supinbot-raven",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin for SUPINBOT to report errors to sentry.",
   "main": "index.js",
   "scripts": {
