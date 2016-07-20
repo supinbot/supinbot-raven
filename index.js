@@ -16,7 +16,10 @@ module.exports = function(SupinBot) {
 
 	SupinBot.log.exitOnError = (err) => {
 		if (_exitOnError) _exitOnError(err);
-		client.captureException(err);
-		process.exit(1);
+		client.captureError(err, (res) => {
+			setTimeout(() => {
+				process.exit(1);
+			}, 3000);
+		});
 	};
 };
